@@ -1,0 +1,105 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin-top: 20px;
+    font-size: 2.5em;
+    color: #4CAF50;
+    text-align: center;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+#webcamContainer, #predictions, #details, #productCounts, #fruitCountDetails {
+    flex: 1;
+    min-width: 350px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+}
+
+#webcamContainer {
+    max-width: 600px;
+}
+
+#videoFeed, #videoFeedFruit {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+#processedImage {
+    display: none;
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#countdown {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #f44336;
+    text-align: center;
+    font-weight: bold;
+}
+
+#predictionDetails, #productCountDetails, #fruitCountDetails {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+#predictionDetails p, #productCountDetails p, #fruitCountDetails p {
+    background-color: #e8f5e9;
+    border-left: 5px solid #4CAF50;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+#predictionDetails p.error, #productCountDetails p.error, #fruitCountDetails p.error {
+    background-color: #ffebee;
+    border-left: 5px solid #f44336;
+}
+
+#timer {
+    font-weight: bold;
+    color: #2196F3;
+}
+
+.button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 20px;
+}
+
+.button:hover {
+    background-color: #45a049;
+}

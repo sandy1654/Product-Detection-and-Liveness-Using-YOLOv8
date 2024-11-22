@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div id="countdown">
+        Time Remaining: <span id="timer">16</span> seconds
+    </div>
+    <h1>YOLOv8 Real-Time Prediction</h1>
+
+    <div id="container">
+        <div id="webcamContainer">
+            <h2>Live Video Feed Product</h2>
+            <img src="{{ url_for('video_feed') }}" id="videoFeed" style="width: 100%; height: auto;">
+
+            <img id="processedImage"  src="" alt="Processed Image">
+        </div>
+        <div><h2>Live Video Fruits and Vegetables</h2>
+        <img src="{{ url_for('video_feed_fruits') }}" id="videoFeedFruit" style="width: 100%; height: auto;">
+
+        </div>
+
+        <div>
+
+            <div>
+        <h1>Product Liveness</h1>
+
+
+            <div id="fruitCountDetails"></div>
+
+         </div>
+    </div>
+
+        <div id="predictions">
+            <h2>Predictions</h2>
+            <div id="predictionDetails"></div>
+        </div>
+
+        <div id="details">
+            <h2>Product Details</h2>
+            <div id="productDetails"></div>
+        </div>
+
+        <div id="productCounts">
+            <h2>Product Counts</h2>
+            <div id="productCountDetails"></div>
+        </div>
+
+    <button class="button" onclick="refreshDetection()">Refresh</button>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
